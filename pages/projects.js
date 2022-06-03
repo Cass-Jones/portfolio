@@ -89,7 +89,7 @@ export default function Home() {
                 <a
                   className="nav-link disabled"
                   href="#"
-                  tabindex="-1"
+                  tabIndex="-1"
                   aria-disabled="true"
                 >
                   Disabled
@@ -99,18 +99,18 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <main classNameName={styles.main}>
-        <h1 classNameName={styles.title}>Projects</h1>
+      <main className={styles.main}>
+        <h1 className={styles.title}>Projects</h1>
       </main>
 
-      <footer classNameName={styles.footer}>
+      <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <span classNameName={styles.logo}>
+          <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { Router } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,9 +28,6 @@ export default function Home() {
       </Head>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -44,17 +42,17 @@ export default function Home() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" href="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/link">
+                <Link className="nav-link" href="/bio">
                   Bio
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdown"
@@ -63,94 +61,84 @@ export default function Home() {
                   aria-expanded="false"
                 >
                   Projects
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <Link className="dropdown-item" href="/projects">
+                      All Projects
+                    </Link>
                   </li>
+                  <hr className="dropdown-divider" />
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <Link className="dropdown-item" href="/projects/a">
+                      Project A
+                    </Link>
                   </li>
+
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
+                    <Link className="dropdown-item" href="/projects/b">
+                      Project B
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link disabled"
                   href="#"
-                  tabindex="-1"
+                  tabIndex="-1"
                   aria-disabled="true"
                 >
                   Disabled
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <main classNameName={styles.main}>
-        <h1 classNameName={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to <Link href="https://nextjs.org">Next.js!</Link>
         </h1>
 
-        <p classNameName={styles.description}>
+        <p className={styles.description}>
           Get started by editing{" "}
-          <code classNameName={styles.code}>pages/index.js</code>
+          <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div classNameName={styles.grid}>
-          <a href="https://nextjs.org/docs" classNameName={styles.card}>
+        <div className={styles.grid}>
+          <Link href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" classNameName={styles.card}>
+          <Link href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="https://github.com/vercel/next.js/tree/canary/examples"
-            classNameName={styles.card}
+            className={styles.card}
           >
             <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            classNameName={styles.card}
+            className={styles.card}
           >
             <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </Link>
         </div>
       </main>
 
-      <footer classNameName={styles.footer}>
-        <a
+      <footer className={styles.footer}>
+        <Link
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <span classNameName={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        </Link>
       </footer>
     </div>
   );
